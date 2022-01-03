@@ -1,3 +1,7 @@
+*{
+  border: 1px solid red;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -26,6 +30,35 @@
 
 .App-link {
   color: #61dafb;
+}
+.tabs {
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.notfound{
+  width: 40%;
+  margin: 10% 0 0 30%;
+}
+.images{
+  display: flex;
+}
+.image{
+  width: 50%;
+  height: 50%;
+}
+.table{
+ margin: 5%;
+
+}
+.thead{
+  color: white;
+  background: rgb(214, 212, 212);
+}
+.container{
+  width: 50%;
+  margin: 5% 0 0 25%;
 }
 
 @keyframes App-logo-spin {
