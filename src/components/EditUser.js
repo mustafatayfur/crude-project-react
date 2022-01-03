@@ -1,5 +1,6 @@
 import { Button, FormControl, FormGroup, Input, InputLabel, Typography } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { addUser } from '../service/api'
 
 const initialValues={
@@ -9,9 +10,18 @@ const initialValues={
     phone: ''
 }
 
-const AddUser = () => {
+const EditUser = () => {
     const [user, setUser] = useState(initialValues)
     const {name, username, email, phone} = user
+    const { id } = useParams()
+
+    useEffect(() => {
+       loadUserData()
+    })
+
+    const loadUserData= () => {
+        
+    }
  
 
     const onValueChange= (e)=> {
@@ -44,9 +54,9 @@ const AddUser = () => {
                 <InputLabel>Phone</InputLabel>
                 <Input onChange={(e)=> onValueChange(e)} name='phone' value={phone}/>
             </FormControl>
-            <Button onClick={addUserDetails} variant='contained' color="primary">Add User</Button>
+            <Button onClick={addUserDetails} variant='contained' color="primary">Edit User</Button>
         </FormGroup>
     )
 }
 
-export default AddUser
+export default EditUser

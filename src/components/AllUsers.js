@@ -1,6 +1,7 @@
-import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
+import { Button, Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
 import { getUsers } from '../service/api'
+import { Link } from 'react-router-dom'
 
 const AllUsers = () => {
 
@@ -15,7 +16,7 @@ const AllUsers = () => {
        console.log(response.data);
        setUsers(response.data)
     }
-    console.log(users)
+
     
 
     return (
@@ -27,6 +28,7 @@ const AllUsers = () => {
                     <TableCell>Username</TableCell>
                     <TableCell>Email</TableCell>
                     <TableCell>Phone</TableCell>
+                    <TableCell></TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -37,6 +39,10 @@ const AllUsers = () => {
                             <TableCell>{user.username}</TableCell>
                             <TableCell>{user.email}</TableCell>
                             <TableCell>{user.phone}</TableCell>
+                            <TableCell>
+                                <Button variant='contained' color="primary" style={{marginRight:10}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
+                                <Button variant='contained' color="secondary">Delete</Button>
+                            </TableCell>
                       </TableRow>  
                     ))
                 }
