@@ -1,6 +1,6 @@
 import { Button, FormControl, FormGroup, Input, InputLabel } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 import { addUser } from '../service/api'
 
 const initialValues={
@@ -13,7 +13,7 @@ const initialValues={
 const EditUser = () => {
     const [user, setUser] = useState(initialValues)
     const {name, username, email, phone} = user
-    const { id } = useParams()
+    // const { id } = useParams()
 
     useEffect(() => {
        loadUserData()

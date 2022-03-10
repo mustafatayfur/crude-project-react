@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core'
+import { AppBar, Toolbar } from '@material-ui/core'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
