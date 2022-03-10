@@ -1,4 +1,4 @@
-import { Button, FormControl, FormGroup, Input, InputLabel, Typography } from '@material-ui/core'
+import { Button, FormControl, FormGroup, Input, InputLabel } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { addUser } from '../service/api'
